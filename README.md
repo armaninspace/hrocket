@@ -19,6 +19,11 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The theme folder will be in a folder called themes
 1. The bootstrap theme will be used to build the first theme
 
+## Blog listing page (Full content or Teaser)
+For showing full content or teaser on blog listing page there is an option for setting in "/hrocket/src/content/blogs_list/blogs.Rmd"
+teaser: "full"  (For full content)
+teaser: "half"  (For content as teaser)
+
 ## Path Settings
 For resolving relative path issue user can adjust some configuration variables in config.toml as follow<br />
 1) for a domain setup <br />
