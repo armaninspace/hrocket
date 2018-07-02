@@ -20,8 +20,8 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The bootstrap theme will be used to build the first theme
 
 ## Blog listing page (Full content or Teaser)
-For showing full content or teaser on blog listing page there is an option for setting in "/hrocket/src/content/blogs_list/blogs.Rmd"
-teaser: "full"  (For full content)
+For showing full content or teaser on blog listing page there is an option for setting in "/hrocket/src/content/blogs_list/blogs.Rmd"<br />
+teaser: "full"  (For full content) <br />
 teaser: "half"  (For content as teaser)
 
 ## Path Settings
