@@ -3,7 +3,7 @@ theme = "HR_Publisher"
 disqusShortname = ""
 BuilPath = "/var/www/static_site.com/public"
 publishDir = ""
-logoLink = ""
+logoLink = "/"
 
 [[mainMenu]]
   name = "Home"
