@@ -156,6 +156,7 @@ dir.create(paste(BuildPath, "/content/posts", sep = ""), showWarnings = FALSE)
 
 for (i in 1:length(posts)) {
   rawFileName <- strsplit(posts[[i]], "[.]")[[1]][[1]]
+  
   if (!file.exists(paste(BuildPath, "/content/posts/", rawFileName, "/index.html", sep = ""))) {
     structureChanged <- TRUE
     
@@ -184,7 +185,7 @@ for (i in 1:length(posts)) {
                  , publishDir  = tomlConfig.list$publishDir
                  , logoLink  = tomlConfig.list$logoLink
     )
-    
+
     # Print some Log where is script running
     print(paste("Creaing post ", rawFileName, sep = ""))
     
@@ -217,27 +218,35 @@ if (structureChanged) {
     stringsAsFactors=FALSE,
     tags = character()
   )
+  
+  blogYamlinfo <- readRMDyamlHeaders(paste(HRroot,"/src/content/blogs_list/blogs.Rmd", sep = ""), "blogs")
+   
   for (i in 1:length(postsRMDs)) {
     rawFileName <- strsplit(postsRMDs[[i]], "[.]")[[1]][[1]]
     postConfig <- readRMDyamlHeaders(paste(HRroot, "/src/content/posts/", postsRMDs[[i]], sep = ""), rawFileName)
-    #allPosts <- c(allPosts,postConfig )
     allPosts <- rbind(allPosts, as.data.frame( postConfig))
   }
-  
+
   # pinned posts
   pinnedPosts <- allPosts[ which(allPosts$pinned==TRUE), ]
-  
+
   # unpinned posts
   unpinnedPosts <- allPosts[ which(allPosts$pinned==FALSE), ]
-  
+  #print(unpinnedPosts)
   #sort by date
   pinnedPosts[] <- lapply(pinnedPosts, as.character)
   pinnedPosts <- pinnedPosts[order(pinnedPosts$date, decreasing = TRUE),]
   tmp.pinned <- split(pinnedPosts, seq(nrow(pinnedPosts)))
+
   finalPinnedPosts <- list()
   for (s in 1:length(tmp.pinned)) {
-    finalPinnedPosts[[s]] <- as.list(tmp.pinned[[s]])
-    finalPinnedPosts[[s]]$tags <- strsplit(finalPinnedPosts[[s]]$tags, ",")[[1]] 
+      finalPinnedPosts[[s]] <- as.list(tmp.pinned[[s]])
+      finalPinnedPosts[[s]]$tags <- strsplit(finalPinnedPosts[[s]]$tags, ",")[[1]] 
+    if (blogYamlinfo$teaser == "full") {
+      output1 <- markDownReader1(BuildPath, paste(HRroot, "/src/content/posts/", sep = ""), finalPinnedPosts[[s]]$rawFileName)
+      finalPinnedPosts[[s]]$teaser <- output1$body
+      finalPinnedPosts[[s]]$pheader <- output1$header
+    }
   }
   
   unpinnedPosts[] <- lapply(unpinnedPosts, as.character)
@@ -248,6 +257,7 @@ if (structureChanged) {
     
     # Render blogs.RMD file
     blogsOutput <- markDownReader(BuildPath, HRroot, "blogs.Rmd", page = FALSE, post = FALSE, index = FALSE, blogs = TRUE)
+    
     # Get header configurations
     blogYaml <- readRMDyamlHeaders(paste(HRroot,"/src/content/blogs_list/blogs.Rmd", sep = ""), "blogs")
     
@@ -263,17 +273,22 @@ if (structureChanged) {
     
   }
   
-  
   tmp.unpinned <- split(unpinnedPosts, seq(nrow(unpinnedPosts)))
   finalUnPinnedPosts <- list()
   for (s in 1:length(tmp.unpinned)) {
     finalUnPinnedPosts[[s]] <- as.list(tmp.unpinned[[s]])
     finalUnPinnedPosts[[s]]$tags <- strsplit(finalUnPinnedPosts[[s]]$tags, ",")[[1]]
+    if (blogYamlinfo$teaser == "full") {
+      output1 <- markDownReader1(BuildPath, paste(HRroot, "/src/content/posts/", sep = ""), finalUnPinnedPosts[[s]]$rawFileName)
+      finalUnPinnedPosts[[s]]$teaser <- output1$body
+      finalUnPinnedPosts[[s]]$pheader <- output1$header
+    }
   }
   pager <- FALSE
   if (length(finalUnPinnedPosts) > itemPerpage) {
     pager <- TRUE
   }
+  
   
   # Get mustache template's content
   postTemplate <- readLines(paste(theme, "/templates/posts_list.mustache", sep = ""))
@@ -296,12 +311,14 @@ if (structureChanged) {
   )
   
   # create blogs directory if not exist
-  dir.create(paste(BuildPath, "/content/pages/blogs", sep = ""), showWarnings = FALSE)
+  #dir.create(paste(BuildPath, "/content/pages/blogs", sep = ""), showWarnings = FALSE)
   
   # Create actual output file
   writeLines(
     whisker.render(postTemplate, data),
     paste(BuildPath, "/content/pages/blogs/index.html", sep = ""))
+    # patch For making blog list as home page
+    #paste(BuildPath, "/index.html", sep = ""))
   
 }
 

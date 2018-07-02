@@ -67,23 +67,11 @@
         <a id="main-content"></a>
         <div class="region region-content">
           <article class="article full clearfix">
-            <footer>
-              <div class="author">
-                <span>{{ postDate }}</span>
-              </div>
-            </footer>
             <div class="content">
               {{# content }}
                 {{{ . }}}
               {{/content}}
-              <div class="field">
-                <div class="field--label">Tags</div>
-                <div class="field--items tags">
-                  {{# tags }}
-                    <span class="field--item tag">#{{{ . }}}</span>
-                  {{/tags}}
-                </div>
-              </div>
+
             </div>
           </article>
         </div>
