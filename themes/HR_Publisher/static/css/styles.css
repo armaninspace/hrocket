@@ -3324,3 +3324,11 @@ h1.title {
 	padding-left: 0;
 	padding-right: 0;
 }
+.site-title a:hover {
+  text-decoration: none !important;
+  color: #333332 !important;
+}
+.menu .menu-item a:hover {
+  text-decoration: none !important;
+  color: #00aadc !important;
+}
