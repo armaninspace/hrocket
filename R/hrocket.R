@@ -168,7 +168,17 @@ for (i in 1:length(posts)) {
     
     # Get post's header configurations
     postsYamlHeader <- readRMDyamlHeaders(paste(HRroot, "/src/content/posts/", posts[[i]], sep = ""), rawFileName)
-    
+    if(length(postsYamlHeader) < 8) {
+      stop('Please check your Posts Rmd files header there must be 6 parameters as follow 
+           ---
+           title: "Some text title"
+           date: "15.02.2018"
+           teaser: "Some text teaser"
+           pinned: TRUE
+           commentEnable: FALSE
+           tags: "plotly,interactive,plot"
+           ---')
+    }
     # prepare variables to send mustache template
     data <- list(siteName = tomlConfig.list$siteName
                  , mainMenu = tomlConfig.list$mainMenu
