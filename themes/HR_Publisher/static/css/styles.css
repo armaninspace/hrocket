@@ -820,7 +820,7 @@ input::-moz-focus-inner {
 --------------------------------------------------------------*/
 
 .menu-toggle {
-	margin: 0 auto;
+	margin: 25px auto;
 	display: block;
 	padding: .4375em .875em;
 	-webkit-transition: background 200ms ease-in-out, box-shadow 200ms ease-in-out, color 200ms ease-in-out;
