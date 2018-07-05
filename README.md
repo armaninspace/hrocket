@@ -21,7 +21,7 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 
 ## Embedding images
 For embedding images put your images at "src/images" directory then in your Rmd files embed image as follow<br />
-![Fig. Computer](/images/computer.jpg)
+"![Fig. Computer](/images/computer.jpg)"
 
 computer.jpg is a sample image embeded in "src/content/pages/about.Rmd"
 
