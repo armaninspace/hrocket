@@ -19,6 +19,12 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The theme folder will be in a folder called themes
 1. The bootstrap theme will be used to build the first theme
 
+## Embedding images
+For embedding images put your images at "src/images" directory then in your Rmd files embed image as follow
+![Fig. Computer](/images/computer.jpg)
+
+computer.jpg is a sample image embeded in "src/content/pages/about.Rmd"
+
 ## Blog listing page (Full content or Teaser)
 For showing full content or teaser on blog listing page there is an option for setting in "/hrocket/src/content/blogs_list/blogs.Rmd"<br />
 teaser: "full"  (For full content) <br />
