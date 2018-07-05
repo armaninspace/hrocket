@@ -20,7 +20,7 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The bootstrap theme will be used to build the first theme
 
 ## Embedding images
-For embedding images put your images at "src/images" directory then in your Rmd files embed image as follow
+For embedding images put your images at "src/images" directory then in your Rmd files embed image as follow<br />
 ![Fig. Computer](/images/computer.jpg)
 
 computer.jpg is a sample image embeded in "src/content/pages/about.Rmd"
