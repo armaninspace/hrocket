@@ -2196,7 +2196,7 @@ p.no-comments {
 	position: relative;
 	z-index: 9999;
 	min-height: 1em;
-	margin: 2.625em auto;
+	margin: 65px auto;
 	padding: 0 1.75em;
 	text-align: center;
 	word-wrap: break-word;
@@ -2229,7 +2229,7 @@ body.gravatar-logo-disabled:not(.has-header-image) .site-header {
 }
 
 .site-branding {
-	margin-bottom: 1.75em;
+	margin-bottom: 25px;
 }
 
 .site-description {
@@ -2902,7 +2902,7 @@ time.published + .updated {
 	position: relative;
 	display: inline-block;
 	line-height: 1;
-	margin: 0 .209875em;
+	margin: 5px;
 }
 
 .jetpack-social-navigation li a,
@@ -3057,6 +3057,7 @@ time.published + .updated {
 	}
 h1.title {
     font-size: 38px;
+    margin-top: 20px;
 }
 	.main-navigation ul ul li:hover a,
 	.main-navigation ul ul li.focus a {
