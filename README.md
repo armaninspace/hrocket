@@ -19,6 +19,22 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The theme folder will be in a folder called themes
 1. The bootstrap theme will be used to build the first theme
 
+## How to use on ubuntu
+Edit .bashrc using following command
+$ sudo gedit /path-to-file/.bashrc 
+for setting/exporting variables add following new line at the end of file
+
+export PATH=/path-to-hrocket-directory/hrocket/bin:$PATH
+
+after setting above mentioned 
+
+$ git clone https://github.com/armaninspace/hrocket.git
+
+at your home/ location
+
+then on terminal
+$ hrocket.sh buidl-clean
+
 ## Embedding images
 For embedding images put your images at "src/images" directory<br /> 
 Then in your Rmd files embed image as per images section on following link<br />
