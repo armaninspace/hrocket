@@ -23,17 +23,13 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 Edit .bashrc using following command<br />
 $ sudo gedit /path-to-file/.bashrc 
 
-for setting/exporting variables add following new line at the end of file
-
+Add following new line at the end of file<br />
 export PATH=/path-to-hrocket-directory/hrocket/bin:$PATH
 
-after setting above mentioned 
-
+After setting above mentioned, clone hrocket from github using following command at your home/ location<br />
 $ git clone https://github.com/armaninspace/hrocket.git
 
-at your home/ location
-
-then on terminal
+Then on your terminal execute hrocket with following command
 $ hrocket.sh buidl-clean
 
 ## Embedding images
