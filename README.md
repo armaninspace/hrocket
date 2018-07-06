@@ -26,6 +26,11 @@ https://rmarkdown.rstudio.com/authoring_basics.html
 
 computer.jpg is a sample image embeded in "src/content/pages/about.Rmd"
 
+## Embedding videos
+For embedding youtube videos paste iframe embed code in Rmd file as follow<br />
+<iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/EjDwhcZq1z0" allowfullscreen="" height="385" frameborder="0" width="100%">
+</iframe>
+
 ## Blog listing page (Full content or Teaser)
 For showing full content or teaser on blog listing page there is an option for setting in "/hrocket/src/content/blogs_list/blogs.Rmd"<br />
 teaser: "full"  (For full content) <br />
