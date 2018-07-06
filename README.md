@@ -20,8 +20,9 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The bootstrap theme will be used to build the first theme
 
 ## How to use on ubuntu
-Edit .bashrc using following command
+Edit .bashrc using following command<br />
 $ sudo gedit /path-to-file/.bashrc 
+
 for setting/exporting variables add following new line at the end of file
 
 export PATH=/path-to-hrocket-directory/hrocket/bin:$PATH
