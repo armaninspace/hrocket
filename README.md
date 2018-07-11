@@ -29,8 +29,8 @@ export PATH=/home/your-username/hrocket/bin:$PATH
 After setting above mentioned, clone hrocket from github using following command at your home/ location<br />
 $ git clone https://github.com/armaninspace/hrocket.git
 
-Then on your terminal execute hrocket with following command
-$ hrocket.sh buidl-clean
+Then on your terminal execute hrocket with following command<br /> 
+$ hrocket.sh build-clean
 
 ## Embedding images
 For embedding images put your images at "src/images" directory<br /> 
