@@ -26,7 +26,7 @@ $ sudo gedit /path-to-file/.bashrc
 Add following new line at the end of file<br />
 export PATH=/home/your-username/hrocket/bin:$PATH
 
-After setting above mentioned, clone hrocket from github using following command at your home/ location<br />
+After setting above mentioned, clone hrocket from github using following command at your "home/" location<br />
 $ git clone https://github.com/armaninspace/hrocket.git
 
 Then on your terminal execute hrocket with following command<br /> 
