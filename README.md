@@ -22,7 +22,7 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 ## System requirements
 Install "configr" package in R<br />
 Install "xml2" package in R<br />
-Install "pandoc" on your OS<br />
+Install "pandoc" on your OS (For ubuntu $ sudo apt-get install pandoc)<br />
 
 ## How to use on ubuntu
 Edit .bashrc using following command<br />
