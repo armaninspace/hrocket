@@ -20,6 +20,8 @@ The name HRocket is a play on the venerable portable typewriter the Hermes Rocke
 1. The bootstrap theme will be used to build the first theme
 
 ## System requirements
+Install Git on your local machine (see https://git-scm.com/downloads)<br />
+Install R on your local machine (see https://www.r-project.org)<br />
 Install "configr" package in R<br />
 Install "xml2" package in R<br />
 Install "pandoc" on your OS (For ubuntu $ sudo apt-get install pandoc)<br />
