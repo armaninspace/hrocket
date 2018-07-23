@@ -4,6 +4,9 @@ disqusShortname = ""
 BuilPath = "/var/www/static_site.com/public"
 publishDir = ""
 logoLink = "/"
+metaKeywords = "HTML, CSS, XML, XHTML, JavaScript"
+googleAnalyticsTrackingId = "UA-232232-34"
+siteUrl = "http://example.com"
 
 [[mainMenu]]
   name = "Home"
