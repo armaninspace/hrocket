@@ -56,6 +56,11 @@ For showing full content or teaser on blog listing page there is an option for s
 teaser: "full"  (For full content) <br />
 teaser: "half"  (For content as teaser)
 
+## Blog listing as home page
+For setting blog as home page there is an option for setting in "/hrocket/src/content/blogs_list/blogs.Rmd"<br />
+bloghome: "false" (Not as home page) <br />
+bloghome: "true"  (As home page) <br />
+
 ## Path Settings
 For resolving relative path issue user can adjust some configuration variables in config.toml as follow<br />
 1) for a domain setup <br />
