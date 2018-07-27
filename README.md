@@ -61,6 +61,17 @@ For setting blog as home page there is an option for setting in "/hrocket/src/co
 bloghome: "false" (Not as home page) <br />
 bloghome: "true"  (As home page) <br />
 
+## XML Sitemap
+Hrocket will also create a sitemap.xml at website's root directory which includes all the urls of your static website.
+
+## Meta Keywords
+In config.toml file you can add meta keywaords as follow.<br />
+metaKeywords = "HTML, CSS, XML, XHTML, JavaScript"
+
+## Google Analytics Integration
+In config.toml file you can add key for google analytics as follow.<br />
+googleAnalyticsTrackingId = "UA-232232-34"
+
 ## Path Settings
 For resolving relative path issue user can adjust some configuration variables in config.toml as follow<br />
 1) for a domain setup <br />
