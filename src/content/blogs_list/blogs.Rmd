@@ -3,6 +3,6 @@ title: ""
 sortby: "title"
 perpage_item: 5
 teaser: "full"
-bloghome: "true"
+bloghome: "false"
 ---
 
