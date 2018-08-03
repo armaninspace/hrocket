@@ -72,6 +72,11 @@ metaKeywords = "HTML, CSS, XML, XHTML, JavaScript"
 In config.toml file you can add key for google analytics as follow.<br />
 googleAnalyticsTrackingId = "UA-232232-34"
 
+## Robots.txt
+Hrocket will also create a robots.txt which allows or disallows the indexing of site by search engine crawlers. This can be handled by a variable in conf.toml file as follow<br />
+robotsAllow = "True" (This will allow indexing of static website by the search engine crawlers)<br />
+robotsAllow = "False" (This will disallow indexing of static website by the search engine crawlers)
+
 ## Path Settings
 For resolving relative path issue user can adjust some configuration variables in config.toml as follow<br />
 1) for a domain setup <br />
